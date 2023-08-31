@@ -2,3 +2,13 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+:root{
+  --white: #efeff1;
+  --black: #293438;
+  --red: #bd3437;
+}
+
+body{
+  background-color: var(--white);
+}
