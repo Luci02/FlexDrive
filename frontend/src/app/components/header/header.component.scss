@@ -1,0 +1,58 @@
+header{
+
+  height: 100vh;
+  // overflow: hidden;
+
+  .header-div{
+    background-image: url('../../../assets/img/banner_image.png');
+    background-repeat: no-repeat;
+    background-position: 120% center;
+    height: 100%;
+
+    div.d-flex{
+
+      margin-top: 2em;
+      color: var(--black);
+      font-size: 1.5em;
+
+      div.main-header-content{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 8em;
+        flex-grow: 1;
+
+        h1{
+          color: rgb(8, 8, 8);
+          font-size: 2.5em;
+          margin-bottom: 30px;
+
+          span{
+            color: var(--red);
+          }
+
+        }
+
+        p.desc{
+          color: var(--light-gray);
+        }
+
+        p, h1{
+          width: 80%;
+        }
+      }
+
+      div.car-img{
+        overflow: hidden;
+
+        #header-car{
+          scale: .9;
+        }
+
+      }
+
+    }
+  }
+
+}
