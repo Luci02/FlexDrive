@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { BookingFormComponent } from './components/booking-form/booking-form.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HowToComponent } from './components/how-to/how-to.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomepagePage,
     HeaderComponent,
     NavbarComponent,
-    BookingFormComponent
+    BookingFormComponent,
+    HowToComponent
   ],
   imports: [
     BrowserModule,
