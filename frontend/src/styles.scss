@@ -7,7 +7,23 @@
   --white: #efeff1;
   --black: #293438;
   --red: #bd3437;
-  --light-gray: #7a7a7a;
+  --light-grey: #7a7a7a;
+
+  .white{
+    color: #efeff1;
+  }
+
+  .black{
+    color: #293438;
+  }
+
+  .red{
+    color: #bd3437;
+  }
+
+  .grey{
+    color: #7a7a7a;
+  }
 }
 
 *{

@@ -1,0 +1,27 @@
+div#login-page{
+
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--white);
+
+  .wrapper{
+    height: 100%;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(41,52,56,1) 33%, rgba(74,52,56,1) 66%, rgba(189,52,55,1) 100%);
+
+    .login-form{
+      background-color: var(--white);
+      padding: 1rem 2rem 2rem 2rem;
+      border-radius: 5px;
+
+      button[type="submit"]{
+        background: rgb(41,52,56);
+        background: linear-gradient(322deg, rgba(41,52,56,1) 33%, rgba(74,52,56,1) 66%, rgba(189,52,55,1) 100%);
+        color: var(--white);
+        border: 0;
+      }
+    }
+
+  }
+
+}

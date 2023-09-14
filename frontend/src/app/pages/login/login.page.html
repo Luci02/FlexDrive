@@ -1,0 +1,23 @@
+<div id="login-page">
+  <div class="container-fluid p-3 ps-5">
+    <a [routerLink]="['']" class="text-decoration-none">
+      <p class="d-inline black fw-medium me-4">↤ Home</p>
+      <img src="assets/img/Logo.png" alt="FlexDrive Logo" class="" id="flexdrive-logo" width="200px" />
+    </a>
+  </div>
+  <div class="container-fluid bg-black wrapper">
+    <form class="w-25 mx-auto login-form d-block" onsubmit="">
+      <h1 class="black mb-4 text-center">Login</h1>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required autocomplete="off">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group mb-5">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required autocomplete="off">
+      </div>
+      <button type="submit" class="btn">Login</button>
+    </form>
+  </div>
+</div>

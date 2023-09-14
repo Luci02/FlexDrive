@@ -1,4 +1,4 @@
-<div class="container-fluid container-lg mt-3">
+<div class="container-fluid container-lg pt-3">
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" [routerLink]="['']">
@@ -10,21 +10,18 @@
       <div class="collapse navbar-collapse" id="navbar" [ngbCollapse]="toggleNavbar">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['home']">Home</a>
+            <a class="nav-link" [routerLink]="['/home']">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['show-vehicles']">Vehicle Models</a>
+            <a class="nav-link" [routerLink]="['/vehicles']">Vehicle Models</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['']">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['']">Contact</a>
+            <a class="nav-link" href="/home#about">About</a>
           </li>
         </ul>
         <div class="d-flex align-items-center justify-content-end">
-          <a [routerLink]="['']" class="nav-link me-2">Sign In</a>
-          <a [routerLink]="['']">
+          <a [routerLink]="['/login']" class="nav-link me-2">Sign In</a>
+          <a [routerLink]="['/register']">
             <button class="btn offset">Register</button>
           </a>
         </div>

@@ -9,4 +9,28 @@ section.how-to{
 
   }
 
+  .step{
+
+    img{
+      max-height: 200px;
+    }
+
+    div.text-center{
+
+      h3{
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      p{
+
+        @media screen and (min-width: 990px) {
+          padding: 0 5rem;
+        }
+      }
+
+    }
+
+  }
+
 }
