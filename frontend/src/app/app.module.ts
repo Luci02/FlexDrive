@@ -8,7 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BookingFormComponent } from './components/booking-form/booking-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HowToComponent } from './components/how-to/how-to.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -17,6 +17,7 @@ import { FAQComponent } from './components/faq/faq.component';
 import { LoginPage } from './pages/login/login.page';
 import { RegisterPage } from './pages/register/register.page';
 import { VehiclesListPage } from './pages/vehicles-list/vehicles-list.page';
+import { AdminPage } from './pages/admin/admin.page';
 
 @NgModule({
   declarations: [
@@ -31,13 +32,15 @@ import { VehiclesListPage } from './pages/vehicles-list/vehicles-list.page';
     FAQComponent,
     LoginPage,
     RegisterPage,
-    VehiclesListPage
+    VehiclesListPage,
+    AdminPage
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule
   ],
   providers: [],

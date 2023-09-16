@@ -18,12 +18,19 @@
           <li class="nav-item">
             <a class="nav-link" href="/home#about">About</a>
           </li>
+          <li class="nav-item" *ngIf="isAdmin">
+            <a class="nav-link" href="/admin-panel">Admin Panel</a>
+          </li>
         </ul>
-        <div class="d-flex align-items-center justify-content-end">
-          <a [routerLink]="['/login']" class="nav-link me-2">Sign In</a>
-          <a [routerLink]="['/register']">
-            <button class="btn offset">Register</button>
-          </a>
+        <div class="d-flex align-items-center justify-content-end" *ngIf="!isLoggedIn">
+            <a [routerLink]="['/login']" class="nav-link me-2">Sign In</a>
+            <a [routerLink]="['/register']">
+              <button class="btn offset">Register</button>
+            </a>
+        </div>
+        <div class="d-flex align-items-center justify-content-center" *ngIf="isLoggedIn">
+          <p class="m-0 fs-5 black">Benvenuto, <span>{{username}}</span></p>
+          <button class="btn btn-logout" (click)="logout()">Logout</button>
         </div>
       </div>
     </div>
