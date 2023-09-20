@@ -1,0 +1,75 @@
+<div class="manage-vehicle-page">
+  <div id="navbar-container" class="pb-3">
+    <app-navbar></app-navbar>
+  </div>
+  <main class="">
+    <h1 class="black text-center mb-5" id="manage-title">Add new Vehicle</h1>
+    <div class="container pb-5">
+      <form class="border border-3 rounded-3 border-danger-subtle py-3 px-5" [formGroup]="manageVehicleForm" (submit)="OnSubmit()">
+        <div class="row g-3">
+          <div class="col-6" formGroupName="brand">
+            <label for="car-brand" class="text-capitalize form-label">Brand</label>
+            <input type="text" id="car-brand" class="form-control" formControlName="name">
+          </div>
+          <div class="col-6">
+            <label for="car-model" class="text-capitalize form-label">Model</label>
+            <input type="text" id="car-model" class="form-control" formControlName="model">
+          </div>
+          <div class="col-12">
+            <label for="car-trim" class="text-capitalize form-label">Trim</label>
+            <input type="text" id="car-trim" class="form-control" formControlName="trim">
+          </div>
+          <div class="col-4">
+            <label for="car-engine" class="text-capitalize form-label">engine</label>
+            <select name="car-engine" id="car-engine" class="form-select" formControlName="engineType">
+              <option value="GASOLINE" class="text-uppercase" selected>GASOLINE</option>
+              <option value="DIESEL" class="text-uppercase">DIESEL</option>
+              <option value="HYBRID" class="text-uppercase">HYBRID</option>
+              <option value="ELECTRIC" class="text-uppercase">ELECTRIC</option>
+            </select>
+          </div>
+          <div class="col-4">
+            <label for="car-mileage" class="text-capitalize form-label">mileage</label>
+            <select name="car-mileage" id="car-mileage" class="form-select" formControlName="mileage">
+              <option value="10000">10.000 km</option>
+              <option value="15000">15.000 km</option>
+              <option value="20000">20.000 km</option>
+              <option value="30000">30.000 km</option>
+              <option value="100000" selected>100.000 km</option>
+            </select>
+          </div>
+          <div class="col-4">
+            <label for="car-contract-duration" class="text-capitalize form-label">duration</label>
+            <select name="car-contract-duration" id="car-contract-duration" class="form-select" formControlName="rentDuration">
+              <option value="36" selected>36 Month</option>
+              <option value="48">48 Month</option>
+              <option value="60">60 Month</option>
+              <option value="72">72 Month</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <label for="car-transmission" class="text-capitalize form-label">transmission</label>
+            <select name="car-transmission" id="car-transmission" class="form-select" formControlName="transmission">
+              <option value="MANUAL" class="text-capitalize" selected>Manual</option>
+              <option value="AUTOMATIC" class="text-capitalize" selected>Automatic</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <label for="car-price" class="text-capitalize form-label">price</label>
+            <div class="input-group">
+              <input type="number" id="car-price" class="form-control" formControlName="price">
+              <span class="input-group-text">€</span>
+            </div>
+          </div>
+          <div class="col-12">
+            <label for="car-image" class="text-capitalize form-label">image</label>
+            <input type="file" class="form-control" formControlName="imgPath" id="car-image" />
+          </div>
+          <div class="col-12 text-end">
+            <button type="submit" class="btn-submit" id="btn-form-submit">Add Vehicle</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>

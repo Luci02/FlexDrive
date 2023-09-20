@@ -1,1 +1,44 @@
-<p>admin works!</p>
+<div class="admin-page">
+  <div id="navbar-container" class="pb-3">
+    <app-navbar></app-navbar>
+  </div>
+  <main class="">
+    <h1 class="black text-center mb-5">Manage Vehicles</h1>
+    <div class="container">
+      <div class="text-end mb-2">
+        <a [routerLink]="['/admin','manage']">
+          <button class="btn btn-danger">New Vehicle</button>
+        </a>
+      </div>
+      <table class="table">
+        <thead>
+          <tr class="text-capitalize">
+            <th scope="col" class="col col-md-1">Brand</th>
+            <th scope="col" class="col col-md-2">Model</th>
+            <th scope="col">Trim</th>
+            <th scope="col" class="col col-md-1">Price</th>
+            <th scope="col" class="text-center d-none d-md-block">image</th>
+            <th scope="col" class="col col-md-1"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let vehicle of vehicleArray">
+            <td class="py-5">{{vehicle.brand.name}}</td>
+            <td class="py-5">{{vehicle.model}}</td>
+            <td class="py-5">{{vehicle.trim}}</td>
+            <td class="py-5">{{vehicle.price}}€</td>
+            <td class="text-center p-0">
+              <img src="{{vehicle.imgPath}}" alt="{{vehicle.brand.name}}" class="img-fluid table-img d-none d-md-inline">
+            </td>
+            <td class="text-center py-5">
+              <a [routerLink]="['/admin','manage', vehicle.id]" title="Modify">
+                <img src="../../../assets/icons/edit.svg" alt="edit" height="30" />
+              </a>
+              <img src="../../../assets/icons/delete.svg" alt="edit" height="30" (click)="OnDelete(vehicle.id!)" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,15 @@
+.manage-vehicle-page{
+
+  background-color: var(--white);
+  min-height: 100vh;
+
+  form{
+    .btn-submit{
+      border: 1px solid var(--red);
+      border-radius: 5px;
+      padding: .3em;
+      color: var(--black);
+    }
+  }
+
+}

@@ -18,6 +18,8 @@ import { LoginPage } from './pages/login/login.page';
 import { RegisterPage } from './pages/register/register.page';
 import { VehiclesListPage } from './pages/vehicles-list/vehicles-list.page';
 import { AdminPage } from './pages/admin/admin.page';
+import { AddModifyVehicleFormComponent } from './components/add-modify-vehicle-form/add-modify-vehicle-form.component';
+import { ManageVehiclePage } from './pages/manage-vehicle/manage-vehicle.page';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { AdminPage } from './pages/admin/admin.page';
     LoginPage,
     RegisterPage,
     VehiclesListPage,
-    AdminPage
+    AdminPage,
+    AddModifyVehicleFormComponent,
+    ManageVehiclePage
   ],
   imports: [
     BrowserModule,

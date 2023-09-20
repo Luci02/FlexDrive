@@ -23,6 +23,7 @@ export class NavbarComponent {
     localStorage.removeItem('token');
     localStorage.removeItem('isLogged');
     localStorage.removeItem('username');
+    localStorage.removeItem('isAdmin');
     window.location.reload();
   }
 

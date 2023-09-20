@@ -5,6 +5,7 @@ import { LoginPage } from './pages/login/login.page';
 import { RegisterPage } from './pages/register/register.page';
 import { VehiclesListPage } from './pages/vehicles-list/vehicles-list.page';
 import { AdminPage } from './pages/admin/admin.page';
+import { ManageVehiclePage } from './pages/manage-vehicle/manage-vehicle.page';
 
 const routes: Routes = [
   {
@@ -31,6 +32,14 @@ const routes: Routes = [
   {
     path: 'admin-panel',
     component: AdminPage
+  },
+  {
+    path: 'admin/manage',
+    component: ManageVehiclePage,
+  },
+  {
+    path: 'admin/manage/:id',
+    component: ManageVehiclePage,
   }
 ];
 

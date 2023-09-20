@@ -19,7 +19,7 @@
             <a class="nav-link" href="/home#about">About</a>
           </li>
           <li class="nav-item" *ngIf="isAdmin">
-            <a class="nav-link" href="/admin-panel">Admin Panel</a>
+            <a class="nav-link" [routerLink]="['/admin-panel']">Admin Panel</a>
           </li>
         </ul>
         <div class="d-flex align-items-center justify-content-end" *ngIf="!isLoggedIn">

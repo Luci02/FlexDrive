@@ -37,8 +37,10 @@ public class VehicleService {
 		return VehicleRepo.findById(id).get();
 	}
 	
-	public void removeVehicle(Long id) {
-		VehicleRepo.deleteById(id);
+	public Vehicle removeVehicle(Long id) {
+		Vehicle v = VehicleRepo.findById(id).get();
+		VehicleRepo.delete(v);
+		return v;
 	}
 
 }

@@ -5,6 +5,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,6 +21,7 @@ import com.epicode.Spring.main.service.VehicleService;
 
 @RestController
 @RequestMapping("/api/vehicle")
+@CrossOrigin(origins = "*")
 public class VehicleController {
 	
 	@Autowired VehicleService vSvc;
@@ -46,5 +49,10 @@ public class VehicleController {
 	public ResponseEntity<Vehicle> addVehicle( @RequestBody Vehicle v ) {
 		return new ResponseEntity<Vehicle>(vSvc.addVehicle(v), HttpStatus.OK);
 	}
-
+	
+	@DeleteMapping("/{id}")
+	public ResponseEntity<Vehicle> deleteVehicle(@PathVariable Long id) {
+		return new ResponseEntity<Vehicle>(vSvc.removeVehicle(id), HttpStatus.OK);
+	}
+	
 }

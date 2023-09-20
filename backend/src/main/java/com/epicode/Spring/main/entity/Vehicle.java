@@ -29,6 +29,8 @@ public class Vehicle {
 	
 	private Integer price;
 	
+	private String imgPath;
+	
 	@ManyToOne
 	private Brand brand;
 	private String model;
