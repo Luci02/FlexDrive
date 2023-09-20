@@ -34,7 +34,7 @@
               <a [routerLink]="['/admin','manage', vehicle.id]" title="Modify">
                 <img src="../../../assets/icons/edit.svg" alt="edit" height="30" />
               </a>
-              <img src="../../../assets/icons/delete.svg" alt="edit" height="30" (click)="OnDelete(vehicle.id!)" />
+              <img src="../../../assets/icons/delete.svg" alt="edit" height="30" (click)="OnDelete(vehicle.id!)" id="delete-row" />
             </td>
           </tr>
         </tbody>
