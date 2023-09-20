@@ -9,3 +9,17 @@
 .car-price{
   line-height: 1;
 }
+
+.shadow-lg {
+  &:hover{
+    box-shadow: 0 1rem 3rem rgba(255, 0, 0, 0.473) !important;
+  }
+}
+
+.card{
+  transition: all .5s;
+  &:hover{
+    scale: 1.1;
+    cursor: pointer;
+  }
+}

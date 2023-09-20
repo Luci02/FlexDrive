@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Vehicle } from 'src/app/interfaces/vehicle';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -7,6 +8,8 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class VehiclesListPage implements OnInit {
 
+  vehiclesArray: Vehicle[] = [];
+
   constructor(
     private authSvc: AuthService,
   ) {}
@@ -14,9 +17,9 @@ export class VehiclesListPage implements OnInit {
   ngOnInit(): void {
     this.authSvc.getAllVehicles().subscribe(
       (value: any) => {
-        console.log(value);
+        this.vehiclesArray = value.content;
       }
-    )
+      )
   }
 
 }
