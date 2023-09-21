@@ -1,3 +1,4 @@
+import { HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Vehicle } from 'src/app/interfaces/vehicle';
 import { AuthService } from 'src/app/services/auth.service';
@@ -15,9 +16,16 @@ export class AdminPage implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.authSvc.getAllVehicles().subscribe((value: any) => {
+    const pageSize = 200;
+    const params = new HttpParams()
+      .set('size', pageSize)
+      .set('sort', "brand,asc")
+
+    this.authSvc.getAllVehicles(params).subscribe((value: any) => {
       this.vehicleArray = value.content;
-      console.log(this.vehicleArray);
+      console.log("Vehicle Array", this.vehicleArray);
+      console.log("Value", value);
+
     });
 
   }

@@ -1,3 +1,4 @@
+import { HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Vehicle } from 'src/app/interfaces/vehicle';
 import { AuthService } from 'src/app/services/auth.service';
@@ -15,11 +16,11 @@ export class VehiclesListPage implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.authSvc.getAllVehicles().subscribe(
+    const params = new HttpParams();
+    this.authSvc.getAllVehicles(params).subscribe(
       (value: any) => {
         this.vehiclesArray = value.content;
-      }
-      )
+      })
   }
 
 }

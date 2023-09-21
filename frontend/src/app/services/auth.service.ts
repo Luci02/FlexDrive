@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { RegisterData } from '../interfaces/register-data';
 import { LoginData } from '../interfaces/login-data';
@@ -23,8 +23,10 @@ export class AuthService {
     return this.http.post(`${this.URL}/auth/login`, data);
   }
 
-  getAllVehicles() {
-    return this.http.get(`${this.URL}/vehicle`);
+  getAllVehicles(params: HttpParams) {
+    return this.http.get(`${this.URL}/vehicle`, {
+      params: params
+    });
   }
 
   getSingleVehicle(id: Number) {
