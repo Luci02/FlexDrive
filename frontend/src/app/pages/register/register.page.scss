@@ -1,4 +1,4 @@
-div#login-page{
+div#register-page{
 
   height: 100vh;
   overflow: hidden;
@@ -9,11 +9,14 @@ div#login-page{
     padding: 2rem;
     background: linear-gradient(135deg, rgba(41,52,56,1) 33%, rgba(74,52,56,1) 66%, rgba(189,52,55,1) 100%);
 
-    .login-form{
+    .register-form{
       background-color: var(--white);
       padding: 1rem 2rem 2rem 2rem;
       border-radius: 5px;
       @media screen and (min-width: 500px) {
+        max-width: 75%;
+      }
+      @media screen and (min-width: 1000px) {
         max-width: 50%;
       }
 
