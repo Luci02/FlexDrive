@@ -6,7 +6,7 @@
     </a>
   </div>
   <div class="container-fluid bg-black wrapper">
-    <form class="w-25 mx-auto login-form d-block" [formGroup]="registerForm" (submit)="OnSubmit()">
+    <!-- <form class="mx-auto login-form d-block" [formGroup]="registerForm" (submit)="OnSubmit()">
       <h1 class="black mb-4 text-center">Register</h1>
       <div class="form-group d-flex">
         <div class="me-1">
@@ -28,6 +28,32 @@
         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" formControlName="password" required>
       </div>
       <button type="submit" class="btn" [disabled]="registerForm.invalid">Register</button>
+    </form> -->
+
+    <form class="mx-auto login-form d-block" [formGroup]="registerForm" (submit)="OnSubmit()">
+      <h1 class="black mb-4 text-center">Register</h1>
+      <div class="row g-3">
+        <div class="col col-md-6">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter name" formControlName="name" required>
+        </div>
+        <div class="col col-md-6">
+          <label for="username">Username</label>
+          <input type="text" class="form-control" id="username" placeholder="Enter username" formControlName="username" required>
+        </div>
+        <div class="col-12">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" formControlName="email" required>
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="col-12">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" formControlName="password" required>
+        </div>
+        <div class="col-12 mt-5">
+          <button type="submit" class="btn" [disabled]="registerForm.invalid">Register</button>
+        </div>
+      </div>
     </form>
   </div>
 </div>
