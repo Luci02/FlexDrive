@@ -21,7 +21,3 @@ FlexDrive is a web application that allows individuals to rent cars for a long p
 - Java 17
 - Spring Boot
 - PostgreSQL
-
-## License
-
-The project is released under the MIT license.
