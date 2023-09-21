@@ -1,5 +1,5 @@
 
-# FlexDrive
+# FlexDrive - Turning Miles into Moments: Renting Happiness, One Drive at a Time
 
 ## Introduction
 
@@ -21,3 +21,5 @@ FlexDrive is a web application that allows individuals to rent cars for a long p
 - Java 17
 - Spring Boot
 - PostgreSQL
+
+![GitHub tag (with filter)](https://img.shields.io/github/v/tag/:user/:repo)
