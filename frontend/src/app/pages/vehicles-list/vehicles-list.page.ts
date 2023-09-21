@@ -16,7 +16,9 @@ export class VehiclesListPage implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const params = new HttpParams();
+    const params = new HttpParams()
+        .set('size', 200)
+        .set('sort', 'brand,asc');
     this.authSvc.getAllVehicles(params).subscribe(
       (value: any) => {
         this.vehiclesArray = value.content;
