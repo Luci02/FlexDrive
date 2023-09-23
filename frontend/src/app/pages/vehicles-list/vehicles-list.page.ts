@@ -11,18 +11,31 @@ export class VehiclesListPage implements OnInit {
 
   vehiclesArray: Vehicle[] = [];
 
+  collectionSize: number = 0;
+  page:number = 0;
+  pageSize: number = 0;
+
   constructor(
     private authSvc: AuthService,
   ) {}
 
   ngOnInit(): void {
+    this.pageChange(this.page);
+  }
+
+  pageChange($event: any) {
+    console.log($event);
     const params = new HttpParams()
-        .set('size', 200)
+        .set('page', this.page - 1)
         .set('sort', 'brand,asc');
+
     this.authSvc.getAllVehicles(params).subscribe(
       (value: any) => {
+        this.pageSize = value.size;
+        this.collectionSize = value.totalElements;
         this.vehiclesArray = value.content;
       })
+    window.scroll(0,0);
   }
 
 }

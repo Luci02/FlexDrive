@@ -11,7 +11,7 @@
     </div>
     <div class="col">
     <!-- <div class="col-10"> -->
-      <div class="row row-cols-3 g-5">
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
         <div class="col" *ngFor="let vehicle of vehiclesArray">
           <div class="card h-100 px-5 shadow-lg">
             <div class="my-3 text-center car-price">
@@ -54,21 +54,10 @@
       </div>
     </div>
   </div>
-  <div class="row mt-5 d-none">
+  <div class="row mt-5" *ngIf="collectionSize != 0">
     <div class="col">
-      <nav aria-label="Page navigation example">
-        <ul class="pagination justify-content-center">
-          <li class="page-item disabled">
-            <a class="page-link">Previous</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-          </li>
-        </ul>
-      </nav>
+      <ngb-pagination class="d-flex justify-content-center" [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize" [maxSize]="3" [rotate]="true" [ellipses]="false" [boundaryLinks]="true" (pageChange)="pageChange($event)">
+      </ngb-pagination>
     </div>
   </div>
 </div>
