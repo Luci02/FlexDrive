@@ -23,3 +23,20 @@
     cursor: pointer;
   }
 }
+
+::ng-deep ngb-pagination .page-link {
+  color: var(--red);
+
+  &:hover{
+    color: var(--red);
+  }
+}
+
+::ng-deep ngb-pagination .page-item.active .page-link {
+  background-color: var(--red);
+  border-color: darkred;
+  &:hover{
+    color: white;
+  }
+}
+
