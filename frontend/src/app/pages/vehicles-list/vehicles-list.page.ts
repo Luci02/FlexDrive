@@ -25,8 +25,9 @@ export class VehiclesListPage implements OnInit {
 
   pageChange($event: any) {
     const params = new HttpParams()
-        .set('page', this.page - 1)
-        .set('sort', 'brand,asc');
+      .set('page', this.page - 1)
+      .set('sort', 'brand,asc')
+      .append('sort', 'model,asc');
 
     this.authSvc.getAllVehicles(params).subscribe(
       (value: any) => {
