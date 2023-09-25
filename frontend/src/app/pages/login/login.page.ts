@@ -28,7 +28,6 @@ export class LoginPage implements OnInit {
 
   public OnSubmit() {
     this.authSvc.login(this.loginForm.value).subscribe( ((value: any) => {
-      console.log(value);
       localStorage.setItem('token', value.accessToken);
       localStorage.setItem('isLogged', 'true');
       localStorage.setItem('username', value.username);

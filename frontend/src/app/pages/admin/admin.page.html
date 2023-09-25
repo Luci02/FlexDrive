@@ -39,6 +39,17 @@
           </tr>
         </tbody>
       </table>
+      <ngb-pagination
+          [collectionSize]="collectionSize"
+          [(page)]="page"
+          [maxSize]="3"
+          [rotate]="true"
+          [ellipses]="false"
+          [boundaryLinks]="true"
+          [pageSize]="pageSize"
+          class="d-flex justify-content-end"
+          (pageChange)="pageChange($event)"
+      ></ngb-pagination>
     </div>
   </main>
 </div>

@@ -11,23 +11,16 @@ export class AdminPage implements OnInit {
 
   vehicleArray!: Vehicle[];
 
+  collectionSize: number = 0;
+  page:number = 0;
+  pageSize: number = 0;
+
   constructor(
     private authSvc: AuthService,
   ) {}
 
   ngOnInit(): void {
-    const pageSize = 200;
-    const params = new HttpParams()
-      .set('size', pageSize)
-      .set('sort', "brand,asc")
-
-    this.authSvc.getAllVehicles(params).subscribe((value: any) => {
-      this.vehicleArray = value.content;
-      console.log("Vehicle Array", this.vehicleArray);
-      console.log("Value", value);
-
-    });
-
+    this.pageChange(this.page);
   }
 
   OnDelete(id: Number): void {
@@ -35,6 +28,21 @@ export class AdminPage implements OnInit {
       console.log(value);
       this.vehicleArray = this.vehicleArray.filter(vehicle => vehicle.id !== id);
     })
+  }
+
+  pageChange($event: any) {
+    window.scroll(0,0);
+
+    const params = new HttpParams()
+        .set('page', this.page - 1)
+        .set('sort', 'brand,asc');
+
+    this.authSvc.getAllVehicles(params).subscribe(
+      (value: any) => {
+        this.pageSize = value.size;
+        this.collectionSize = value.totalElements;
+        this.vehicleArray = value.content;
+      })
   }
 
 }

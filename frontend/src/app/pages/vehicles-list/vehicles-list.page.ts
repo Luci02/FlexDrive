@@ -24,7 +24,6 @@ export class VehiclesListPage implements OnInit {
   }
 
   pageChange($event: any) {
-    console.log($event);
     const params = new HttpParams()
         .set('page', this.page - 1)
         .set('sort', 'brand,asc');

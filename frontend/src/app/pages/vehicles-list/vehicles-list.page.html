@@ -56,8 +56,17 @@
   </div>
   <div class="row mt-5" *ngIf="collectionSize != 0">
     <div class="col">
-      <ngb-pagination class="d-flex justify-content-center" [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize" [maxSize]="3" [rotate]="true" [ellipses]="false" [boundaryLinks]="true" (pageChange)="pageChange($event)">
-      </ngb-pagination>
+      <ngb-pagination
+          [collectionSize]="collectionSize"
+          [(page)]="page"
+          [maxSize]="3"
+          [rotate]="true"
+          [pageSize]="pageSize"
+          class="d-flex justify-content-center"
+          [ellipses]="false"
+          [boundaryLinks]="true"
+          (pageChange)="pageChange($event)"
+      ></ngb-pagination>
     </div>
   </div>
 </div>
