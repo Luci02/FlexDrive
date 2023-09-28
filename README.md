@@ -1,13 +1,12 @@
-
-# FlexDrive - Turning Miles into Moments
+# 🚘 FlexDrive - Turning Miles into Moments 🚘
 
 ![GitHub tag (with filter)](https://img.shields.io/github/v/tag/Luci02/FlexDrive)
 
-## Introduction
+## 💬 Introduction
 
 FlexDrive is a web application that allows individuals to rent cars for a long period of time. The application is designed to be user-friendly and affordable, making it a great option for people who need a car for more than a few days.
 
-## Features
+## 📰 Features
 - For all users:
     - Login
     - Registration
@@ -16,10 +15,14 @@ FlexDrive is a web application that allows individuals to rent cars for a long p
     - Registration
     - Access to an admin panel where admins can add, modify, or remove vehicles
 
-## Requirements
+## ⚙️ Requirements
 
 - Node.js
 - Angular CLI
 - Java 17
 - Spring Boot
 - PostgreSQL
+
+## 🖋️ Author
+
+[Luciano Parlato](https://github.com/Luci02)
