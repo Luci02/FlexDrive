@@ -1,12 +1,17 @@
+
 # 🚘 FlexDrive - Turning Miles into Moments 🚘
 
 ![GitHub tag (with filter)](https://img.shields.io/github/v/tag/Luci02/FlexDrive)
 
 ## 💬 Introduction
 
-FlexDrive is a web application that allows individuals to rent cars for a long period of time. The application is designed to be user-friendly and affordable, making it a great option for people who need a car for more than a few days.
+FlexDrive is a **full-stack** web application built with Angular, Spring Boot, and PostgreSQL. It is a car rental platform that allows individuals to rent cars for a long period of time.
 
+The front-end of the application is built with **Angular**, a popular JavaScript framework. It uses **Bootstrap** for a responsive and user-friendly interface.
+
+The back-end of the application is built with **Spring Boot**, a Java framework for creating RESTful APIs. It uses **PostgreSQL** as a database to store car rental data.
 ## 📰 Features
+
 - For all users:
     - Login
     - Registration
@@ -15,14 +20,6 @@ FlexDrive is a web application that allows individuals to rent cars for a long p
     - Registration
     - Access to an admin panel where admins can add, modify, or remove vehicles
 
-## ⚙️ Requirements
-
-- Node.js
-- Angular CLI
-- Java 17
-- Spring Boot
-- PostgreSQL
-
 ## 🖋️ Author
 
-[Luciano Parlato](https://github.com/Luci02)
+- [Luciano Parlato](https://github.com/Luci02)
