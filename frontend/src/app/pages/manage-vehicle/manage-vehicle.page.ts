@@ -40,6 +40,9 @@ export class ManageVehiclePage implements OnInit {
       let pageH1 = document.getElementById('manage-title');
       pageH1!.textContent = "Modify Vehicle";
 
+      let btnSubmit = document.getElementById('btn-form-submit');
+      btnSubmit!.textContent = "Modify Vehicle";
+
       this.vehicle.id = Number.parseInt(this.idParam);
 
       this.authSvc.getSingleVehicle( Number.parseInt(this.idParam) ).subscribe((value: any) => {
